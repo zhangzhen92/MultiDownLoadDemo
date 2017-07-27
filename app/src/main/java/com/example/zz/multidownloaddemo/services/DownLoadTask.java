@@ -49,7 +49,7 @@ public class DownLoadTask {
         if(threads.size() == 0){
              int length = mFileInfo.getLength() / mThreadCount;
             for (int i = 0; i < mThreadCount; i++) {
-                ThreadInfo threadInfo = new ThreadInfo(i,mFileInfo.getUrl(),i * length,(i+1) * length,0);
+                ThreadInfo threadInfo = new ThreadInfo(i,mFileInfo.getUrl(),i * length,(i+1) * length -1,0);
                 if(i == mThreadCount -1){
                     threadInfo.setEnd(mFileInfo.getLength());
                 }
